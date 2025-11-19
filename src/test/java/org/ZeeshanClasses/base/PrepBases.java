@@ -3,6 +3,7 @@ package org.ZeeshanClasses.base;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.ZeeshanClasses.browserManager.BrowserFactory;
 import org.ZeeshanClasses.utilities.ConfigReader;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,8 @@ public class PrepBases extends PrepCleanUp{
         String dateTime = LocalDateTime.now().toString();
         reports = new ExtentReports();
         spark = new ExtentSparkReporter("output");
+        spark.config().setTheme(Theme.DARK);
+        spark.config().setDocumentTitle("Automation Test Report");
         reports.attachReporter(spark);
         logger = reports.createTest(dateTime + "see for yourself");
     }
