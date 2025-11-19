@@ -33,7 +33,7 @@ public class PrepBases extends PrepCleanUp{
 
     @AfterTest
     public void cleanUpReportingMechanism(){
-
+        reports.flush();
     }
 
 
