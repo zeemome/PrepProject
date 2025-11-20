@@ -11,7 +11,7 @@ public class ThirdTest extends PrepBases {
     public void letsCallThisMethod() throws InterruptedException{
         driver.navigate().to("https://www.facebook.com");
         Thread.sleep(3000);
-        driver.findElement(By.linkText("meta")).click();
+        driver.findElement(By.linkText("Messenger")).click();
         Thread.sleep(10000);
     }
 }
