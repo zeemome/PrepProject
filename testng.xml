@@ -9,6 +9,7 @@
             <class name="org.ZeeshanClasses.tests.FirstTest"></class>
             <class name="org.ZeeshanClasses.tests.SecondTest"></class>
             <class name="org.ZeeshanClasses.tests.ThirdTest"></class>
+            <class name="org.ZeeshanClasses.tests.FifthTest"></class>
         </classes>
     </test>
 </suite>
