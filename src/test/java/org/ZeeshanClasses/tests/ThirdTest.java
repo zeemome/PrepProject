@@ -13,5 +13,6 @@ public class ThirdTest extends PrepBases {
         Thread.sleep(3000);
         driver.findElement(By.linkText("Messenger")).click();
         Thread.sleep(10000);
+        System.out.println("Addition of a line");
     }
 }
