@@ -4,7 +4,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.ZeeshanClasses.base.PrepBases;
 import org.ZeeshanClasses.customs.PrepProj;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -17,12 +16,11 @@ import java.util.Date;
 
 public class ExtentReportListeners implements ITestListener{
 
-    ExtentReports extent;
-    ExtentTest test;
-    ExtentSparkReporter reporter;
+    public static ExtentReports extent = createExtent();
+    public static ExtentTest test;
+    public static ExtentSparkReporter reporter;
 
-    @Override
-    public void onStart(ITestContext context){
+    private static ExtentReports createExtent(){
         String timeStamp = new SimpleDateFormat("yyyymmddHHmmss").format(new Date());
         File reportDir = new File("output/reports");
         if(!reportDir.exists()){
@@ -34,6 +32,7 @@ public class ExtentReportListeners implements ITestListener{
 
         extent = new ExtentReports();
         extent.attachReporter(reporter);
+        return extent;
 
     }
 
