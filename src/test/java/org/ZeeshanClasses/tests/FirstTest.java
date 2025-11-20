@@ -11,7 +11,11 @@ public class FirstTest extends PrepBases {
     @PrepProj(id = "TC_001", description = "First attempt", createdBy = "Zeeshan")
     public void loginIntoPage(){
         driver.get("https://www.google.com");
+    }
 
-
+    @Test
+    @PrepProj(id = "TC_003", description="Navigate to and fro", createdBy = "Zeeshan")
+    public void moveToAndFro(){
+        driver.navigate().to("https://www.facebook.com");
     }
 }

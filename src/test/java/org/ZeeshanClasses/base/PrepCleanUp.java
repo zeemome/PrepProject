@@ -32,10 +32,4 @@ public class PrepCleanUp {
             File [] files = folder.listFiles();
         }
     }
-
-    @AfterSuite
-    public void flushEverything(){
-        reports.flush();
-    }
-
 }
